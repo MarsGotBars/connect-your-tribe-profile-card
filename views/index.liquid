@@ -1,14 +1,8 @@
+{% assign hobbies =[test1
+  , test2] %}
 {% render 'partials/head.liquid' %}
-
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
-
-  <p>{{ person.name }}</p>
-
-  <footer></footer>
-</article>
+{% render 'partials/card.liquid'
+  , user: person
+  , hobbies: hobbies %}
 
 {% render 'partials/foot.liquid' %}

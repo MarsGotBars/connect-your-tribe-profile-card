@@ -1,0 +1,42 @@
+ul.slider {
+    display: flex;
+    gap: 1rem;
+    transition: width 300ms ease;
+  }
+  
+  li.item {
+    transform: translateX(5px);
+    display: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: fit-content;
+    color: rgba(var(--secondary), 1);
+  }
+  
+  li.active{
+      display: block;
+      animation: fade 3s infinite;
+  }
+  
+  li:nth-child(odd) {
+    color: rgba(var(--primary), 1);
+  }
+  
+  @keyframes fade {
+    0%{
+      opacity: 0;
+    }
+    5%{
+      opacity: 1;
+      transform: translateX(0);
+    }
+    95%{
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100%{
+      opacity: 0;
+      transform: translateX(-5px);
+    }
+    
+  }

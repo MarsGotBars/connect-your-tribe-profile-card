@@ -1,0 +1,35 @@
+<main>
+  <button aria-label="see more" id="toggle"></button>
+  {% render './profile.liquid' %}
+  <section>
+    <article className="content">
+      <h2>About me</h2>
+      <div>
+        <span>I love</span>
+        {% render './slider.liquid'
+          , hobbies: hobbies %}
+      </div>
+      <div className="wrapper">
+        <p>
+          {{ user.bio }}
+          Voor deze opleiding studeerde ik Software development aan het <br/>
+          <a href="https://www.glr.nl/">Grafisch Lyceum Rotterdam</a>
+          Bekijk anders ook nog even mijn
+          <a href={{ user.website }}>portfolio</a>!
+        </p>
+        <ul>
+          <li className="link">
+            <a className="icon" href="https://github.com/MarsGotBars">
+              {% render './partials/icons/git.liquid' %}
+            </a>
+          </li>
+          <li className="link">
+            <a className="icon" href="https://www.linkedin.com/in/marcin-magdziak-664847223/">
+              {% render './partials/icons/linkedIn.liquid' %}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </section>
+</main>

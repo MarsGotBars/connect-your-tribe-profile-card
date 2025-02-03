@@ -1,0 +1,36 @@
+figure {
+    position: absolute;
+    width: 280px;
+    height: 100%;
+    background: rgba(var(--primary));
+    display: flex;
+    padding: 1px;
+  }
+  
+  main:hover figure {
+    padding: var(--sm-spacing);
+  }
+  
+  figcaption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(var(--primary), 1);
+    color: rgba(var(--text, 1));
+    padding: var(--sm-spacing);
+    z-index: 11;
+  }
+  
+  @media screen and (min-width: 720px) {
+    figure{
+      z-index: 2;
+    }
+    main.fold:hover figure {
+      padding-right: calc(var(--sm-spacing) / 2);
+    }
+  
+    main.fold figure {
+      padding-right: 0.5px;
+    }
+  }
+  
