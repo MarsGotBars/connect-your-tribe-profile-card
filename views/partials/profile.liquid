@@ -1,6 +1,9 @@
+{% assign full_name = name %}
+{% assign name_parts = full_name | split: " " %}
+
 <figure>
   <img src="./assets/ik.jpeg" alt="Marcin Magdziak" />
   <figcaption>
-    <h1 className="slide">Marcin</h1>
+    <h1 class="slide">{{name_parts[0]}}</h1>
   </figcaption>
 </figure>

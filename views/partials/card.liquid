@@ -1,15 +1,15 @@
-<main>
+<main class="fold">
   <button aria-label="see more" id="toggle"></button>
-  {% render './profile.liquid' %}
+  {% render './profile.liquid', name: person.name %}
   <section>
-    <article className="content">
+    <article class="content">
       <h2>About me</h2>
       <div>
         <span>I love</span>
         {% render './slider.liquid'
-          , hobbies: hobbies %}
+          , hobbies: person.custom.hobbies %}
       </div>
-      <div className="wrapper">
+      <div class="wrapper">
         <p>
           {{ user.bio }}
           Voor deze opleiding studeerde ik Software development aan het <br/>
@@ -18,13 +18,13 @@
           <a href={{ user.website }}>portfolio</a>!
         </p>
         <ul>
-          <li className="link">
-            <a className="icon" href="https://github.com/MarsGotBars">
+          <li class="link">
+            <a class="icon" href="https://github.com/MarsGotBars">
               {% render './icons/Git.liquid' %}
             </a>
           </li>
-          <li className="link">
-            <a className="icon" href="https://www.linkedin.com/in/marcin-magdziak-664847223/">
+          <li class="link">
+            <a class="icon" href="https://www.linkedin.com/in/marcin-magdziak-664847223/">
               {% render './icons/linkedIn.liquid' %}
             </a>
           </li>

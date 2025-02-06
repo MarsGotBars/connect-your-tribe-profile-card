@@ -13,13 +13,13 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --bg: 36, 39, 48;
-  --bg-alt: 62, 67, 83;
-  --text: 219, 226, 249;
-  --primary: 130, 153, 234;
-  --secondary: 100, 108, 255;
-  --icon: #dbe2f9;
-  --icon-alt: #8299ea;
+  --bg: 51, 51 ,51;
+  --bg-alt: 47, 21, 11;
+  --text: 219, 181, 44;
+  --primary: 249, 229, 167;
+  --secondary: 245, 225, 164;
+  --icon: var(--secondary);
+  --icon-alt: var(--primary);
   --font-alt: "Comfortaa", sans-serif;
   color: rgba(var(--text), 1);
 }
@@ -48,6 +48,10 @@ body {
   background: url("../assets/bg-texture.png") rgba(var(--bg), 1);
 }
 
+/* keeping this one in mind, nice effect */
+body:has(main:hover){
+  background: url("../assets/bg-texture.png") rgba(var(--bg), .9);
+}
 button {
   display: grid;
   place-content: center;
@@ -64,4 +68,10 @@ button:focus-visible {
 
 ul {
   list-style-type: none;
+}
+
+.data{
+  position: absolute;
+  top: 2%;
+  left: 2%;
 }

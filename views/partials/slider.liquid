@@ -1,10 +1,7 @@
-{% assign hobbies =[test1
-  , test2] %}
-<ul className="slider">
-  hoi
+<ul class="slider">
   {% for hobby in hobbies %}
-    <li class="item {% if currentSlide == forloop.index %}active {% else %} {% endif %}">
-      {hobby}
+    <li class="item {% if forloop.index == 1 %} active {% endif %}">
+      {{ hobby }}
     </li>
   {% endfor %}
 </ul>

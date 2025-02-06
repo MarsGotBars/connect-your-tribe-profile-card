@@ -1,0 +1,14 @@
+{% render 'partials/head.liquid' %}
+<h1>Data-Driven Web</h1>
+<p>Ik ben dus {{ person.name }}</p>
+<p>Het is vandaag {{ 'now' | date: "%b %d, %y" }}</p>
+{% comment %} json element uit de opdracht {% endcomment %}
+{% comment %} <details class="data"><summary>Data</summary><pre>{{ person | json:4 }}</pre></details> {% endcomment %}
+<p>geboorte datum: {{person.birthdate}}</p>
+<ul>
+    {% for hobby in person.custom.hobbies %}
+    <li>
+      {{ hobby }}
+    </li>
+  {% endfor %}
+</ul>
