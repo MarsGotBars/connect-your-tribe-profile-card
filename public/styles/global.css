@@ -45,12 +45,12 @@ body {
   place-content: center;
   min-width: 20rem;
   min-height: 100vh;
-  background: url("../assets/bg-texture.png") rgba(var(--bg), 1);
+  background: url("../assets/bg-texture.png") rgba(var(--bg-alt), .95);
 }
 
 /* keeping this one in mind, nice effect */
 body:has(main:hover){
-  background: url("../assets/bg-texture.png") rgba(var(--bg), .9);
+  background: url("../assets/bg-texture.png") rgba(var(--bg-alt), 1);
 }
 button {
   display: grid;
