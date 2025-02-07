@@ -1,6 +1,7 @@
 <main class="fold">
   <button aria-label="see more" id="toggle"></button>
-  {% render './profile.liquid', name: person.name %}
+  {% render './profile.liquid'
+    , name: person.name %}
   <section>
     <article class="content">
       <h2>About me</h2>
@@ -12,7 +13,7 @@
       <div class="wrapper">
         <p>
           {{ user.bio }}
-          Voor deze opleiding studeerde ik Software development aan het <br/>
+          Voor deze opleiding studeerde ik Software development aan het
           <a href="https://www.glr.nl/">Grafisch Lyceum Rotterdam</a>
           Bekijk anders ook nog even mijn
           <a href={{ user.website }}>portfolio</a>!
